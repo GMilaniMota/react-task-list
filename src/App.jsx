@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./components/Tasks";
+import Tasks from "./components/Tasks";
+import AddTask from "./components/AddTask";
 
 
 import "./App.css"
-import Tasks from "./components/Tasks";
 
 const App = () => {
   const [tasks, setTasks] = useState([
@@ -19,9 +19,23 @@ const App = () => {
     },
   ]);
 
+  const handleTaskAddition = ( taskTitle ) => {
+    const newTasks = [
+      ...tasks,
+      {
+        title: taskTitle,
+        id: Math.random(10),
+        completed: false,
+      },
+    ];
+
+    setTasks(newTasks);
+  }
+
   return (
     <>
       <div className="container">
+        <AddTask handleTaskAddition={handleTaskAddition}/>
         <Tasks tasks={tasks} />
       </div>
     </>
