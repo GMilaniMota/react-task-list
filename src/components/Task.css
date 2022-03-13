@@ -8,3 +8,21 @@
     color: #eee;
     align-items: center;
 }
+
+.task-title:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.remove-task-button, .see-task-details-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: chartreuse;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.remove-task-button:hover, .see-task-details-button:hover {
+    color: #eee;
+}
