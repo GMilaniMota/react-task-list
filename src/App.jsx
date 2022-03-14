@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -16,16 +17,23 @@ const App = () => {
     {
       id: '1',
       title: 'Estudar',
-      content: 'Estudar muitas coisas',
       completed: false,
     },
     {
       id: '2',
       title: 'Cozinhar',
-      content: '',
       completed: true,
     },
   ]);
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const { data } = await axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10');
+      setTasks(data);
+    };
+
+    fetchTasks();
+  }, [])
 
   const handleTaskClick = (taskId) => {
     const newTasks = tasks.map(task => {
