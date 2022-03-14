@@ -9,6 +9,9 @@
     font-weight: bold;
     cursor: pointer;
     border: none;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
 }
 
 .button:hover{

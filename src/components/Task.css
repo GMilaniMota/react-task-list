@@ -9,9 +9,15 @@
     align-items: center;
 }
 
+.task-title {
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+}
+
 .task-title:hover {
     cursor: pointer;
-    font-weight: bold;
+    color: chartreuse;
 }
 
 .remove-task-button, .see-task-details-button {
@@ -21,6 +27,9 @@
     color: chartreuse;
     margin: 0 5px;
     cursor: pointer;
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
 }
 
 .remove-task-button:hover, .see-task-details-button:hover {

@@ -20,7 +20,7 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
                 style={task.completed ? {borderLeft: '6px solid chartreuse'} : {}}
             >
                 <div className="task-title" onClick={() => handleTaskClick(task.id)}>
-                    {task.title}
+                    <h4>{task.title}</h4>
                 </div>
                 <div className="buttons-container">
                     <button onClick={handleTaskDetailsClick} className="see-task-details-button"> <CgInfo /> </button>

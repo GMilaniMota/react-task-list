@@ -16,11 +16,13 @@ const App = () => {
     {
       id: '1',
       title: 'Estudar',
+      content: 'Estudar muitas coisas',
       completed: false,
     },
     {
       id: '2',
       title: 'Cozinhar',
+      content: '',
       completed: true,
     },
   ]);
@@ -39,8 +41,9 @@ const App = () => {
     const newTasks = [
       ...tasks,
       {
-        title: taskTitle,
         id: uuidv4(),
+        title: taskTitle,
+        content: '',
         completed: false,
       },
     ];
